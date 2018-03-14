@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMap2DBinding.iOS", "AMap2D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMapFoundationBinding.iOS", "AMapFoundationBinding.iOS\AMapFoundationBinding.iOS.csproj", "{F92BF928-1C48-4778-AC51-1A7A3AC3BF00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMap3DBinding.iOS", "AMap3DBinding.iOS\AMap3DBinding.iOS.csproj", "{ACBCE952-CF68-4416-AEE6-A3C967B545FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMapSearchBinding.iOS", "AMapSearchBinding.iOS\AMapSearchBinding.iOS.csproj", "{512CAEC5-E48A-4FD4-90C6-9895BCC5A521}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F92BF928-1C48-4778-AC51-1A7A3AC3BF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F92BF928-1C48-4778-AC51-1A7A3AC3BF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F92BF928-1C48-4778-AC51-1A7A3AC3BF00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACBCE952-CF68-4416-AEE6-A3C967B545FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACBCE952-CF68-4416-AEE6-A3C967B545FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACBCE952-CF68-4416-AEE6-A3C967B545FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACBCE952-CF68-4416-AEE6-A3C967B545FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{512CAEC5-E48A-4FD4-90C6-9895BCC5A521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{512CAEC5-E48A-4FD4-90C6-9895BCC5A521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{512CAEC5-E48A-4FD4-90C6-9895BCC5A521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{512CAEC5-E48A-4FD4-90C6-9895BCC5A521}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
