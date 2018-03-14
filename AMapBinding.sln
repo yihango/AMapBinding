@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMap2DBinding.iOS", "AMap2DBinding.iOS\AMap2DBinding.iOS.csproj", "{662FCC47-9227-4AAF-9843-6E2CE67867EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMapFoundationBinding.iOS", "AMapFoundationBinding.iOS\AMapFoundationBinding.iOS.csproj", "{F92BF928-1C48-4778-AC51-1A7A3AC3BF00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{662FCC47-9227-4AAF-9843-6E2CE67867EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{662FCC47-9227-4AAF-9843-6E2CE67867EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{662FCC47-9227-4AAF-9843-6E2CE67867EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{662FCC47-9227-4AAF-9843-6E2CE67867EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F92BF928-1C48-4778-AC51-1A7A3AC3BF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F92BF928-1C48-4778-AC51-1A7A3AC3BF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F92BF928-1C48-4778-AC51-1A7A3AC3BF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F92BF928-1C48-4778-AC51-1A7A3AC3BF00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3ECB9AF7-31E5-4B28-9A7E-61170E4E2017}
+	EndGlobalSection
+EndGlobal
