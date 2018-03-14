@@ -49,6 +49,9 @@
   <ItemGroup>
     <NativeReference Include="Native References/MAMapKit.framework">
       <Kind>Framework</Kind>
+	  <ForceLoad>True</ForceLoad>
+      <Frameworks>OpenGLES UIKit Foundation CoreGraphics QuartzCore CoreLocation CoreTelephony SystemConfiguration Security AdSupport JavaScriptCore</Frameworks>
+      <LinkerFlags>-lz -lstdc++ -lc++</LinkerFlags>
     </NativeReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
