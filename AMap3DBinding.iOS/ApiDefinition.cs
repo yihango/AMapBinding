@@ -86,7 +86,7 @@ namespace AMap3DBinding.iOS
         NSString kMAMapLayerCameraDegreeKey { get; }
     }
 
-  
+
 
     // @interface NSValueMAGeometryExtensions (NSValue)
     [Category]
@@ -114,28 +114,24 @@ namespace AMap3DBinding.iOS
         NSValue ValueWithMACoordinate(CLLocationCoordinate2D coordinate);
 
         // -(MAMapPoint)MAMapPointValue;
-        [Static]
         [Export("MAMapPointValue")]
         //[Verify(MethodToProperty)]
-        MAMapPoint MAMapPointValue { get; }
+        MAMapPoint MAMapPointValue();
 
         // -(MAMapSize)MAMapSizeValue;
-        [Static]
         [Export("MAMapSizeValue")]
         //[Verify(MethodToProperty)]
-        MAMapSize MAMapSizeValue { get; }
+        MAMapSize MAMapSizeValue();
 
         // -(MAMapRect)MAMapRectValue;
-        [Static]
         [Export("MAMapRectValue")]
         //[Verify(MethodToProperty)]
-        MAMapRect MAMapRectValue { get; }
+        MAMapRect MAMapRectValue();
 
         // -(CLLocationCoordinate2D)MACoordinateValue;
-        [Static]
         [Export("MACoordinateValue")]
         //[Verify(MethodToProperty)]
-        CLLocationCoordinate2D MACoordinateValue { get; }
+        CLLocationCoordinate2D MACoordinateValue();
     }
 
     // @protocol MAAnnotation <NSObject>
@@ -1046,26 +1042,27 @@ namespace AMap3DBinding.iOS
     interface MAMapView_Annotation
     {
         // @property (readonly, nonatomic) NSArray * annotations;
-        [Static]
         [Export("annotations")]
         //[Verify(StronglyTypedNSArray)]
-        NSObject[] Annotations { get; }
+        NSObject[] Annotations();
 
         // @property (copy, nonatomic) NSArray * selectedAnnotations;
-        [Static]
         [Export("selectedAnnotations", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
-        NSObject[] SelectedAnnotations { get; set; }
+        NSObject[] SelectedAnnotations();
+        [Export("setSelectedAnnotations", ArgumentSemantic.Copy)]
+        //[Verify(StronglyTypedNSArray)]
+        void SetSelectedAnnotations(NSObject[] selectedAnnotations);
 
         // @property (readonly, nonatomic) CGRect annotationVisibleRect;
-        [Static]
         [Export("annotationVisibleRect")]
-        CGRect AnnotationVisibleRect { get; }
+        CGRect AnnotationVisibleRect();
 
         // @property (assign, nonatomic) BOOL allowsAnnotationViewSorting __attribute__((deprecated("已废弃 since 5.3.0")));
-        [Static]
         [Export("allowsAnnotationViewSorting")]
-        bool AllowsAnnotationViewSorting { get; set; }
+        bool AllowsAnnotationViewSorting();
+        [Export("setAllowsAnnotationViewSorting")]
+        void SetAllowsAnnotationViewSorting(bool allowsAnnotationViewSorting);
 
         // -(void)addAnnotation:(id<MAAnnotation>)annotation;
         [Export("addAnnotation:")]
@@ -1122,67 +1119,73 @@ namespace AMap3DBinding.iOS
     interface MAMapView_UserLocation
     {
         // @property (nonatomic) BOOL showsUserLocation;
-        [Static]
         [Export("showsUserLocation")]
-        bool ShowsUserLocation { get; set; }
+        bool ShowsUserLocation();
+        [Export("setShowsUserLocation")]
+        void SetShowsUserLocation(bool showsUserLocation);
 
         // @property (readonly, nonatomic) MAUserLocation * userLocation;
-        [Static]
         [Export("userLocation")]
-        MAUserLocation UserLocation { get; }
+        MAUserLocation UserLocation();
 
         // @property (nonatomic) BOOL customizeUserLocationAccuracyCircleRepresentation;
-        [Static]
         [Export("customizeUserLocationAccuracyCircleRepresentation")]
-        bool CustomizeUserLocationAccuracyCircleRepresentation { get; set; }
+        bool CustomizeUserLocationAccuracyCircleRepresentation();
+        [Export("setCustomizeUserLocationAccuracyCircleRepresentation")]
+        void SetCustomizeUserLocationAccuracyCircleRepresentation(bool customizeUserLocationAccuracyCircleRepresentation);
 
         // @property (readonly, nonatomic) MACircle * userLocationAccuracyCircle;
-        [Static]
         [Export("userLocationAccuracyCircle")]
-        MACircle UserLocationAccuracyCircle { get; }
+        MACircle UserLocationAccuracyCircle();
 
         // @property (nonatomic) MAUserTrackingMode userTrackingMode;
-        [Static]
         [Export("userTrackingMode", ArgumentSemantic.Assign)]
-        MAUserTrackingMode UserTrackingMode { get; set; }
+        MAUserTrackingMode UserTrackingMode();
+        [Export("setUserTrackingMode", ArgumentSemantic.Assign)]
+        MAUserTrackingMode SetUserTrackingMode(MAUserTrackingMode userTrackingMode);
 
         // @property (readonly, getter = isUserLocationVisible, nonatomic) BOOL userLocationVisible;
-        [Static]
+        //[Export("userLocationVisible")]
+        //bool UserLocationVisible { [Bind("isUserLocationVisible")] get; }
+        [Bind("isUserLocationVisible")]
         [Export("userLocationVisible")]
-        bool UserLocationVisible { [Bind("isUserLocationVisible")] get; }
+        bool UserLocationVisible();
 
         // @property (nonatomic) CLLocationDistance distanceFilter;
-        [Static]
         [Export("distanceFilter")]
-        double DistanceFilter { get; set; }
+        double DistanceFilter();
+        [Export("setDistanceFilter")]
+        void SetDistanceFilter(double distanceFilter);
 
         // @property (nonatomic) CLLocationAccuracy desiredAccuracy;
-        [Static]
         [Export("desiredAccuracy")]
-        double DesiredAccuracy { get; set; }
+        double DesiredAccuracy();
+        [Export("setDesiredAccuracy")]
+        void SetDesiredAccuracy(double desiredAccuracy);
 
         // @property (nonatomic) CLLocationDegrees headingFilter;
-        [Static]
         [Export("headingFilter")]
-        double HeadingFilter { get; set; }
+        double HeadingFilter();
+        [Export("setHeadingFilter")]
+        void SetHeadingFilter(double desiredAccuracy);
 
         // @property (nonatomic) BOOL pausesLocationUpdatesAutomatically;
-        [Static]
         [Export("pausesLocationUpdatesAutomatically")]
-        bool PausesLocationUpdatesAutomatically { get; set; }
+        bool PausesLocationUpdatesAutomatically();
+        [Export("setPausesLocationUpdatesAutomatically")]
+        void SetPausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically);
 
         // @property (nonatomic) BOOL allowsBackgroundLocationUpdates;
-        [Static]
         [Export("allowsBackgroundLocationUpdates")]
-        bool AllowsBackgroundLocationUpdates { get; set; }
+        bool AllowsBackgroundLocationUpdates();
+        [Export("setAllowsBackgroundLocationUpdates")]
+        void SetAllowsBackgroundLocationUpdates(bool allowsBackgroundLocationUpdates);
 
         // -(void)setUserTrackingMode:(MAUserTrackingMode)mode animated:(BOOL)animated;
-        [Static]
         [Export("setUserTrackingMode:animated:")]
         void SetUserTrackingMode(MAUserTrackingMode mode, bool animated);
 
         // -(void)updateUserLocationRepresentation:(MAUserLocationRepresentation *)representation;
-        [Static]
         [Export("updateUserLocationRepresentation:")]
         void UpdateUserLocationRepresentation(MAUserLocationRepresentation representation);
     }
@@ -1193,10 +1196,9 @@ namespace AMap3DBinding.iOS
     interface MAMapView_Overlay
     {
         // @property (readonly, nonatomic) NSArray * overlays;
-        [Static]
         [Export("overlays")]
         //[Verify(StronglyTypedNSArray)]
-        NSObject[] Overlays { get; }
+        NSObject[] Overlays();
 
         // -(NSArray *)overlaysInLevel:(MAOverlayLevel)level;
         [Export("overlaysInLevel:")]
@@ -1279,32 +1281,32 @@ namespace AMap3DBinding.iOS
     interface MAMapView_Indoor
     {
         // @property (getter = isShowsIndoorMap, nonatomic) BOOL showsIndoorMap;
-        [Static]
+        [Bind("isShowsIndoorMap")]
         [Export("showsIndoorMap")]
-        bool ShowsIndoorMap { [Bind("isShowsIndoorMap")] get; set; }
+        bool ShowsIndoorMap();
+        [Export("setShowsIndoorMap")]
+        void SetShowsIndoorMap(bool showsIndoorMap);
 
         // @property (getter = isShowsIndoorMapControl, nonatomic) BOOL showsIndoorMapControl;
-        [Static]
+        [Bind("isShowsIndoorMapControl")]
         [Export("showsIndoorMapControl")]
-        bool ShowsIndoorMapControl { [Bind("isShowsIndoorMapControl")] get; set; }
+        bool ShowsIndoorMapControl();
+        [Export("setShowsIndoorMapControl")]
+        void SetShowsIndoorMapControl(bool showsIndoorMapControl);
 
         // @property (readonly, nonatomic) CGSize indoorMapControlSize;
-        [Static]
         [Export("indoorMapControlSize")]
-        CGSize IndoorMapControlSize { get; }
+        CGSize IndoorMapControlSize();
 
         // -(void)setIndoorMapControlOrigin:(CGPoint)origin;
-        [Static]
         [Export("setIndoorMapControlOrigin:")]
         void SetIndoorMapControlOrigin(CGPoint origin);
 
         // -(void)setCurrentIndoorMapFloorIndex:(NSInteger)floorIndex;
-        [Static]
         [Export("setCurrentIndoorMapFloorIndex:")]
         void SetCurrentIndoorMapFloorIndex(nint floorIndex);
 
         // -(void)clearIndoorMapCache;
-        [Static]
         [Export("clearIndoorMapCache")]
         void ClearIndoorMapCache();
     }
@@ -1315,9 +1317,10 @@ namespace AMap3DBinding.iOS
     interface MAMapView_CustomMapStyle
     {
         // @property (assign, nonatomic) BOOL customMapStyleEnabled;
-        [Static]
         [Export("customMapStyleEnabled")]
-        bool CustomMapStyleEnabled { get; set; }
+        bool CustomMapStyleEnabled();
+        [Export("setCustomMapStyleEnabled")]
+        void SetCustomMapStyleEnabled(bool customMapStyleEnabled);
 
         // -(void)setCustomMapStyle:(NSData *)customJson __attribute__((deprecated("已废弃, 请使用 setCustomMapStyleWithWebData: since 5.7.0")));
         [Export("setCustomMapStyle:")]
@@ -2097,7 +2100,7 @@ namespace AMap3DBinding.iOS
     }
 
 
-  
+
 
     // @interface MAOfflineMap : NSObject
     [BaseType(typeof(NSObject))]
@@ -2168,10 +2171,9 @@ namespace AMap3DBinding.iOS
     interface MAOfflineMap_Deprecated
     {
         // @property (readonly, nonatomic) NSArray * offlineCities __attribute__((deprecated("use cities instead")));
-        [Static]
         [Export("offlineCities")]
         //[Verify(StronglyTypedNSArray)]
-        NSObject[] OfflineCities { get; }
+        NSObject[] OfflineCities();
 
         // -(void)downloadCity:(MAOfflineCity *)city downloadBlock:(MAOfflineMapDownloadBlock)downloadBlock __attribute__((deprecated("use - (void)downloadItem:(MAOfflineItem *)item shouldContinueWhenAppEntersBackground:(BOOL)shouldContinueWhenAppEntersBackground downloadBlock:(MAOfflineMapDownloadBlock)downloadBlock instead")));
         [Export("downloadCity:downloadBlock:")]
@@ -2237,7 +2239,7 @@ namespace AMap3DBinding.iOS
         [Export("time")]
         double Time { get; set; }
     }
-   
+
     // @interface MATraceManager : NSObject
     [BaseType(typeof(NSObject))]
     interface MATraceManager
