@@ -189,7 +189,7 @@ namespace AMap3DBinding.iOS
         [DllImport("__Internal")]
         //[Verify(PlatformInvoke)]
         //static extern void MAGetTileProjectionFromBounds(MACoordinateBounds bounds, int levelOfDetails, AMapTileProjectionBlock tileProjection);
-        static extern void MAGetTileProjectionFromBounds(MACoordinateBounds bounds, int levelOfDetails, Action<int,int,int,int,int,int> tileProjection);
+        static extern void MAGetTileProjectionFromBounds(MACoordinateBounds bounds, int levelOfDetails, IntPtr tileProjection);
 
 
         // extern double MAAreaForPolygon (CLLocationCoordinate2D *coordinates, int count);
