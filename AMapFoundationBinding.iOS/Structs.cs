@@ -43,10 +43,11 @@ namespace AMapFoundationKit
 
     static class CFunctions
     {
-        // NSString * AMapEmptyStringIfNil (NSString *s);
-        [DllImport("__Internal")]
-        //[Verify (PlatformInvoke)]
-        static extern NSString AMapEmptyStringIfNil(NSString s);
+        // TODO:AMapEmptyStringIfNil
+        //// NSString * AMapEmptyStringIfNil (NSString *s);
+        //[DllImport("__Internal")]
+        ////[Verify (PlatformInvoke)]
+        //static extern NSString AMapEmptyStringIfNil(NSString s);
 
         // extern CLLocationCoordinate2D AMapCoordinateConvert (CLLocationCoordinate2D coordinate, AMapCoordinateType type);
         [DllImport("__Internal")]

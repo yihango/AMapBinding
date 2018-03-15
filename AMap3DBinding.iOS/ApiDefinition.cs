@@ -37,9 +37,9 @@ namespace MAMapKit
     //[Verify(ConstantsInterfaceAssociation)]
     partial interface Constants
     {
-        // extern int NSString;
-        [Field("NSString", "__Internal")]
-        int NSString { get; }
+        //// extern int NSString;
+        //[Field("NSString", "__Internal")]
+        //int NSString { get; }
 
 
         // extern const MAMapSize MAMapSizeWorld;
@@ -1050,7 +1050,7 @@ namespace MAMapKit
         [Export("selectedAnnotations", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
         NSObject[] SelectedAnnotations();
-        [Export("setSelectedAnnotations", ArgumentSemantic.Copy)]
+        [Export("selectedAnnotations", ArgumentSemantic.Copy)]
         //[Verify(StronglyTypedNSArray)]
         void SetSelectedAnnotations(NSObject[] selectedAnnotations);
 
@@ -1061,7 +1061,7 @@ namespace MAMapKit
         // @property (assign, nonatomic) BOOL allowsAnnotationViewSorting __attribute__((deprecated("已废弃 since 5.3.0")));
         [Export("allowsAnnotationViewSorting")]
         bool AllowsAnnotationViewSorting();
-        [Export("setAllowsAnnotationViewSorting")]
+        [Export("allowsAnnotationViewSorting")]
         void SetAllowsAnnotationViewSorting(bool allowsAnnotationViewSorting);
 
         // -(void)addAnnotation:(id<MAAnnotation>)annotation;
@@ -1121,7 +1121,7 @@ namespace MAMapKit
         // @property (nonatomic) BOOL showsUserLocation;
         [Export("showsUserLocation")]
         bool ShowsUserLocation();
-        [Export("setShowsUserLocation")]
+        [Export("showsUserLocation")]
         void SetShowsUserLocation(bool showsUserLocation);
 
         // @property (readonly, nonatomic) MAUserLocation * userLocation;
@@ -1131,7 +1131,7 @@ namespace MAMapKit
         // @property (nonatomic) BOOL customizeUserLocationAccuracyCircleRepresentation;
         [Export("customizeUserLocationAccuracyCircleRepresentation")]
         bool CustomizeUserLocationAccuracyCircleRepresentation();
-        [Export("setCustomizeUserLocationAccuracyCircleRepresentation")]
+        [Export("customizeUserLocationAccuracyCircleRepresentation")]
         void SetCustomizeUserLocationAccuracyCircleRepresentation(bool customizeUserLocationAccuracyCircleRepresentation);
 
         // @property (readonly, nonatomic) MACircle * userLocationAccuracyCircle;
@@ -1141,7 +1141,7 @@ namespace MAMapKit
         // @property (nonatomic) MAUserTrackingMode userTrackingMode;
         [Export("userTrackingMode", ArgumentSemantic.Assign)]
         MAUserTrackingMode UserTrackingMode();
-        [Export("setUserTrackingMode", ArgumentSemantic.Assign)]
+        [Export("userTrackingMode", ArgumentSemantic.Assign)]
         MAUserTrackingMode SetUserTrackingMode(MAUserTrackingMode userTrackingMode);
 
         // @property (readonly, getter = isUserLocationVisible, nonatomic) BOOL userLocationVisible;
@@ -1154,31 +1154,31 @@ namespace MAMapKit
         // @property (nonatomic) CLLocationDistance distanceFilter;
         [Export("distanceFilter")]
         double DistanceFilter();
-        [Export("setDistanceFilter")]
+        [Export("distanceFilter")]
         void SetDistanceFilter(double distanceFilter);
 
         // @property (nonatomic) CLLocationAccuracy desiredAccuracy;
         [Export("desiredAccuracy")]
         double DesiredAccuracy();
-        [Export("setDesiredAccuracy")]
+        [Export("desiredAccuracy")]
         void SetDesiredAccuracy(double desiredAccuracy);
 
         // @property (nonatomic) CLLocationDegrees headingFilter;
         [Export("headingFilter")]
         double HeadingFilter();
-        [Export("setHeadingFilter")]
+        [Export("headingFilter")]
         void SetHeadingFilter(double desiredAccuracy);
 
         // @property (nonatomic) BOOL pausesLocationUpdatesAutomatically;
         [Export("pausesLocationUpdatesAutomatically")]
         bool PausesLocationUpdatesAutomatically();
-        [Export("setPausesLocationUpdatesAutomatically")]
+        [Export("pausesLocationUpdatesAutomatically")]
         void SetPausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically);
 
         // @property (nonatomic) BOOL allowsBackgroundLocationUpdates;
         [Export("allowsBackgroundLocationUpdates")]
         bool AllowsBackgroundLocationUpdates();
-        [Export("setAllowsBackgroundLocationUpdates")]
+        [Export("allowsBackgroundLocationUpdates")]
         void SetAllowsBackgroundLocationUpdates(bool allowsBackgroundLocationUpdates);
 
         // -(void)setUserTrackingMode:(MAUserTrackingMode)mode animated:(BOOL)animated;
@@ -1284,14 +1284,14 @@ namespace MAMapKit
         [Bind("isShowsIndoorMap")]
         [Export("showsIndoorMap")]
         bool ShowsIndoorMap();
-        [Export("setShowsIndoorMap")]
+        [Export("showsIndoorMap")]
         void SetShowsIndoorMap(bool showsIndoorMap);
 
         // @property (getter = isShowsIndoorMapControl, nonatomic) BOOL showsIndoorMapControl;
         [Bind("isShowsIndoorMapControl")]
         [Export("showsIndoorMapControl")]
         bool ShowsIndoorMapControl();
-        [Export("setShowsIndoorMapControl")]
+        [Export("showsIndoorMapControl")]
         void SetShowsIndoorMapControl(bool showsIndoorMapControl);
 
         // @property (readonly, nonatomic) CGSize indoorMapControlSize;
@@ -1319,7 +1319,7 @@ namespace MAMapKit
         // @property (assign, nonatomic) BOOL customMapStyleEnabled;
         [Export("customMapStyleEnabled")]
         bool CustomMapStyleEnabled();
-        [Export("setCustomMapStyleEnabled")]
+        [Export("customMapStyleEnabled")]
         void SetCustomMapStyleEnabled(bool customMapStyleEnabled);
 
         // -(void)setCustomMapStyle:(NSData *)customJson __attribute__((deprecated("已废弃, 请使用 setCustomMapStyleWithWebData: since 5.7.0")));
