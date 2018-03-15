@@ -17,7 +17,13 @@ namespace DemoApp
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
-
+            AMapServices.SharedServices.ApiKey = "ebf541962d1d1060d7c1a66576f12093";
+            AMapServices.SharedServices.EnableHTTPS = true;
+            MAMapView map = new MAMapView();
+            map.Frame = this.View.Bounds;
+            map.SetShowsUserLocation(true);
+            map.SetUserTrackingMode(MAUserTrackingMode.Follow);
+            this.View.AddSubview(map);
         }
 
         public override void DidReceiveMemoryWarning()
