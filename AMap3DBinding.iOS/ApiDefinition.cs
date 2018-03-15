@@ -6,9 +6,9 @@ using Foundation;
 using ObjCRuntime;
 using UIKit;
 
-using AMap3DBinding.iOS;
+using MAMapKit;
 
-namespace AMap3DBinding.iOS
+namespace MAMapKit
 {
 
     // typedef void (^AMapTileProjectionBlock)(int, int, int, int, int, int);

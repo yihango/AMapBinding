@@ -4,9 +4,9 @@ using CoreLocation;
 using Foundation;
 using ObjCRuntime;
 
-using AMap3DBinding.iOS;
+using MAMapKit;
 
-namespace AMap3DBinding.iOS
+namespace MAMapKit
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct MACoordinateBounds

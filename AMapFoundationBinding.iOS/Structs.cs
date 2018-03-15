@@ -5,7 +5,7 @@ using Foundation;
 using ObjCRuntime;
 
 
-namespace AMapFoundationBinding.iOS
+namespace AMapFoundationKit
 {
 
     [Native]

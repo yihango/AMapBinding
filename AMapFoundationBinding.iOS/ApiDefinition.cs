@@ -3,10 +3,10 @@ using System.Runtime.InteropServices;
 using CoreLocation;
 using Foundation;
 using ObjCRuntime;
-using AMapFoundationBinding.iOS;
+using AMapFoundationKit;
 
 
-namespace AMapFoundationBinding.iOS
+namespace AMapFoundationKit
 {
 
 
