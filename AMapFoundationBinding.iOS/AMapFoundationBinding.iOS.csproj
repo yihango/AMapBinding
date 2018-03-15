@@ -39,13 +39,14 @@
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+    <Compile Include="AMapFoundationKit.linkwith.cs">
+      <DependentUpon>AMapFoundationKit.a</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ObjcBindingCoreSource Include="Structs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="Native References/AMapFoundationKit.framework">
-      <Kind>Framework</Kind>
-    </NativeReference>
+    <ObjcBindingNativeLibrary Include="AMapFoundationKit.a" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>

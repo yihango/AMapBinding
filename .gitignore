@@ -260,3 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 /AMap3DBinding.iOS/Native References/MAMapKit.framework
+/AMap3DBinding.iOS/MAMapKit.a
+/AMapFoundationBinding.iOS/AMapFoundationKit.a
