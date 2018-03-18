@@ -265,3 +265,4 @@ __pycache__/
 /AMap2DBinding.Droid/Jars/Amap_2DMap_V5.2.0_20170627.jar
 *.so
 *.jar
+/AMap2DBinding.iOS/MAMapKit.a

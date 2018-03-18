@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>AMap2DBinding.iOS.D</RootNamespace>
     <AssemblyName>AMap2DBinding.iOS</AssemblyName>
-	<IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,16 +39,14 @@
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    <Compile Include="MAMapKit.linkwith.cs">
+      <DependentUpon>MAMapKit.a</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="Native References/MAMapKit.framework">
-      <Kind>Framework</Kind>
-      <ForceLoad>True</ForceLoad>
-      <Frameworks>OpenGLES UIKit Foundation CoreGraphics QuartzCore CoreLocation CoreTelephony SystemConfiguration Security AdSupport JavaScriptCore</Frameworks>
-      <LinkerFlags>-lz -lstdc++ -lc++</LinkerFlags>
-    </NativeReference>
+    <ObjcBindingNativeLibrary Include="MAMapKit.a" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>
