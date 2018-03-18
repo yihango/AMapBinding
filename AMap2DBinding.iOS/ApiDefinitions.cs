@@ -72,28 +72,24 @@ namespace AMap2DBinding.iOS
         NSValue ValueWithMACoordinate(CLLocationCoordinate2D coordinate);
 
         // -(MAMapPoint)MAMapPointValue;
-        [Static]
         [Export("MAMapPointValue")]
         ////[Verify((MethodToProperty)]
-        MAMapPoint MAMapPointValue { get; }
+        MAMapPoint MAMapPointValue();
 
         // -(MAMapSize)MAMapSizeValue;
-        [Static]
         [Export("MAMapSizeValue")]
         ////[Verify((MethodToProperty)]
-        MAMapSize MAMapSizeValue { get; }
+        MAMapSize MAMapSizeValue();
 
         // -(MAMapRect)MAMapRectValue;
-        [Static]
         [Export("MAMapRectValue")]
         ////[Verify((MethodToProperty)]
-        MAMapRect MAMapRectValue { get; }
+        MAMapRect MAMapRectValue();
 
         // -(CLLocationCoordinate2D)MACoordinateValue;
-        [Static]
         [Export("MACoordinateValue")]
         ////[Verify((MethodToProperty)]
-        CLLocationCoordinate2D MACoordinateValue { get; }
+        CLLocationCoordinate2D MACoordinateValue();
     }
 
     // @protocol MAAnnotation <NSObject>
@@ -665,29 +661,35 @@ namespace AMap2DBinding.iOS
     interface MAMapView_LocationOption
     {
         // @property (nonatomic) CLLocationDistance distanceFilter;
-        [Static]
         [Export("distanceFilter")]
-        double DistanceFilter { get; set; }
+        double DistanceFilter();
+        [Export("distanceFilter")]
+        void SetDistanceFilter(double distanceFilter);
+
 
         // @property (nonatomic) CLLocationAccuracy desiredAccuracy;
-        [Static]
         [Export("desiredAccuracy")]
-        double DesiredAccuracy { get; set; }
+        double DesiredAccuracy();
+        [Export("desiredAccuracy")]
+        void SetDesiredAccuracy(double desiredAccuracy);
 
         // @property (nonatomic) CLLocationDegrees headingFilter;
-        [Static]
         [Export("headingFilter")]
-        double HeadingFilter { get; set; }
+        double HeadingFilter();
+        [Export("headingFilter")]
+        void SetHeadingFilter(double headingFilter);
 
         // @property (nonatomic) BOOL pausesLocationUpdatesAutomatically;
-        [Static]
         [Export("pausesLocationUpdatesAutomatically")]
-        bool PausesLocationUpdatesAutomatically { get; set; }
+        bool PausesLocationUpdatesAutomatically();
+        [Export("pausesLocationUpdatesAutomatically")]
+        void PausesLocationUpdatesAutomatically(bool pausesLocationUpdatesAutomatically);
 
         // @property (nonatomic) BOOL allowsBackgroundLocationUpdates;
-        [Static]
         [Export("allowsBackgroundLocationUpdates")]
-        bool AllowsBackgroundLocationUpdates { get; set; }
+        bool AllowsBackgroundLocationUpdates();
+        [Export("allowsBackgroundLocationUpdates")]
+        void SetAllowsBackgroundLocationUpdates(bool allowsBackgroundLocationUpdates);
     }
 
     // @protocol MAMapViewDelegate <NSObject>
