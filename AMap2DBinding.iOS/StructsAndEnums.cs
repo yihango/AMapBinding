@@ -71,21 +71,124 @@ namespace MAMapKit
 
     static class CFunctions
     {
-        // MACoordinateBounds MACoordinateBoundsMake (CLLocationCoordinate2D northEast, CLLocationCoordinate2D southWest);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern MACoordinateBounds MACoordinateBoundsMake(CLLocationCoordinate2D northEast, CLLocationCoordinate2D southWest);
+        // TODO: Link Errors
 
-        // MACoordinateSpan MACoordinateSpanMake (CLLocationDegrees latitudeDelta, CLLocationDegrees longitudeDelta);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern MACoordinateSpan MACoordinateSpanMake(double latitudeDelta, double longitudeDelta);
+        #region Link Errors
 
-        // MACoordinateRegion MACoordinateRegionMake (CLLocationCoordinate2D centerCoordinate, MACoordinateSpan span);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern MACoordinateRegion MACoordinateRegionMake(CLLocationCoordinate2D centerCoordinate, MACoordinateSpan span);
+        //// MACoordinateBounds MACoordinateBoundsMake (CLLocationCoordinate2D northEast, CLLocationCoordinate2D southWest);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern MACoordinateBounds MACoordinateBoundsMake(CLLocationCoordinate2D northEast, CLLocationCoordinate2D southWest);
 
+        //// MACoordinateRegion MACoordinateRegionMake (CLLocationCoordinate2D centerCoordinate, MACoordinateSpan span);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern MACoordinateRegion MACoordinateRegionMake(CLLocationCoordinate2D centerCoordinate, MACoordinateSpan span);
+
+        //// MACoordinateSpan MACoordinateSpanMake (CLLocationDegrees latitudeDelta, CLLocationDegrees longitudeDelta);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern MACoordinateSpan MACoordinateSpanMake(double latitudeDelta, double longitudeDelta);
+
+        //// BOOL MAMapPointEqualToPoint (MAMapPoint point1, MAMapPoint point2);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern bool MAMapPointEqualToPoint(MAMapPoint point1, MAMapPoint point2);
+
+        //// MAMapPoint MAMapPointMake (double x, double y);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern MAMapPoint MAMapPointMake(double x, double y);
+
+        //// BOOL MAMapRectEqualToRect (MAMapRect rect1, MAMapRect rect2);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern bool MAMapRectEqualToRect(MAMapRect rect1, MAMapRect rect2);
+
+        //// double MAMapRectGetHeight (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern double MAMapRectGetHeight(MAMapRect rect);
+
+        //// double MAMapRectGetMaxX (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern double MAMapRectGetMaxX(MAMapRect rect);
+
+        //// double MAMapRectGetMaxY (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern double MAMapRectGetMaxY(MAMapRect rect);
+
+        //// double MAMapRectGetMidX (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern double MAMapRectGetMidX(MAMapRect rect);
+
+        //// double MAMapRectGetMidY (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern double MAMapRectGetMidY(MAMapRect rect);
+
+        //// double MAMapRectGetMinX (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern double MAMapRectGetMinX(MAMapRect rect);
+
+        //// double MAMapRectGetMinY (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern double MAMapRectGetMinY(MAMapRect rect);
+
+        //// double MAMapRectGetWidth (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern double MAMapRectGetWidth(MAMapRect rect);
+
+        //// BOOL MAMapRectIsEmpty (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern bool MAMapRectIsEmpty(MAMapRect rect);
+
+        //// BOOL MAMapRectIsNull (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern bool MAMapRectIsNull(MAMapRect rect);
+
+        //// MAMapRect MAMapRectMake (double x, double y, double width, double height);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern MAMapRect MAMapRectMake(double x, double y, double width, double height);
+
+        //// BOOL MAMapSizeEqualToSize (MAMapSize size1, MAMapSize size2);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern bool MAMapSizeEqualToSize(MAMapSize size1, MAMapSize size2);
+
+        //// MAMapSize MAMapSizeMake (double width, double height);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern MAMapSize MAMapSizeMake(double width, double height);
+
+        //// NSString * MAStringFromMapPoint (MAMapPoint point);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern NSString MAStringFromMapPoint(MAMapPoint point);
+
+        //// NSString * MAStringFromMapRect (MAMapRect rect);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern NSString MAStringFromMapRect(MAMapRect rect);
+
+        //// NSString * MAStringFromMapSize (MAMapSize size);
+        //[DllImport("__Internal")]
+        ////[Verify((PlatformInvoke)]
+        //static extern NSString MAStringFromMapSize(MAMapSize size);
+
+        #endregion
+
+
+        #region Link Success
         // extern MACoordinateRegion MACoordinateRegionMakeWithDistance (CLLocationCoordinate2D centerCoordinate, CLLocationDistance latitudinalMeters, CLLocationDistance longitudinalMeters);
         [DllImport("__Internal")]
         //[Verify((PlatformInvoke)]
@@ -190,103 +293,7 @@ namespace MAMapKit
         [DllImport("__Internal")]
         //[Verify((PlatformInvoke)]
         //static extern void MAGetTileProjectionFromBounds(MACoordinateBounds bounds, int levelOfDetails, AMapTileProjectionBlock tileProjection);
-        static extern void MAGetTileProjectionFromBounds(MACoordinateBounds bounds, int levelOfDetails, Action<int,int,int,int,int,int> tileProjection);
-
-
-        // MAMapPoint MAMapPointMake (double x, double y);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern MAMapPoint MAMapPointMake(double x, double y);
-
-        // MAMapSize MAMapSizeMake (double width, double height);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern MAMapSize MAMapSizeMake(double width, double height);
-
-        // MAMapRect MAMapRectMake (double x, double y, double width, double height);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern MAMapRect MAMapRectMake(double x, double y, double width, double height);
-
-        // double MAMapRectGetMinX (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern double MAMapRectGetMinX(MAMapRect rect);
-
-        // double MAMapRectGetMinY (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern double MAMapRectGetMinY(MAMapRect rect);
-
-        // double MAMapRectGetMidX (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern double MAMapRectGetMidX(MAMapRect rect);
-
-        // double MAMapRectGetMidY (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern double MAMapRectGetMidY(MAMapRect rect);
-
-        // double MAMapRectGetMaxX (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern double MAMapRectGetMaxX(MAMapRect rect);
-
-        // double MAMapRectGetMaxY (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern double MAMapRectGetMaxY(MAMapRect rect);
-
-        // double MAMapRectGetWidth (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern double MAMapRectGetWidth(MAMapRect rect);
-
-        // double MAMapRectGetHeight (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern double MAMapRectGetHeight(MAMapRect rect);
-
-        // BOOL MAMapPointEqualToPoint (MAMapPoint point1, MAMapPoint point2);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern bool MAMapPointEqualToPoint(MAMapPoint point1, MAMapPoint point2);
-
-        // BOOL MAMapSizeEqualToSize (MAMapSize size1, MAMapSize size2);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern bool MAMapSizeEqualToSize(MAMapSize size1, MAMapSize size2);
-
-        // BOOL MAMapRectEqualToRect (MAMapRect rect1, MAMapRect rect2);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern bool MAMapRectEqualToRect(MAMapRect rect1, MAMapRect rect2);
-
-        // BOOL MAMapRectIsNull (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern bool MAMapRectIsNull(MAMapRect rect);
-
-        // BOOL MAMapRectIsEmpty (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern bool MAMapRectIsEmpty(MAMapRect rect);
-
-        // NSString * MAStringFromMapPoint (MAMapPoint point);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern NSString MAStringFromMapPoint(MAMapPoint point);
-
-        // NSString * MAStringFromMapSize (MAMapSize size);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern NSString MAStringFromMapSize(MAMapSize size);
-
-        // NSString * MAStringFromMapRect (MAMapRect rect);
-        [DllImport("__Internal")]
-        //[Verify((PlatformInvoke)]
-        static extern NSString MAStringFromMapRect(MAMapRect rect);
+        static extern void MAGetTileProjectionFromBounds(MACoordinateBounds bounds, int levelOfDetails, Action<int, int, int, int, int, int> tileProjection);
 
         // extern CLLocationCoordinate2D MACoordinateConvert (CLLocationCoordinate2D coordinate, MACoordinateType type) __attribute__((deprecated("已废弃，使用AMapFoundation中关于坐标转换的接口")));
         [DllImport("__Internal")]
@@ -296,7 +303,8 @@ namespace MAMapKit
         // extern CLLocationDirection MAGetDirectionFromCoords (CLLocationCoordinate2D fromCoord, CLLocationCoordinate2D toCoord);
         [DllImport("__Internal")]
         //[Verify((PlatformInvoke)]
-        static extern double MAGetDirectionFromCoords(CLLocationCoordinate2D fromCoord, CLLocationCoordinate2D toCoord);
+        static extern double MAGetDirectionFromCoords(CLLocationCoordinate2D fromCoord, CLLocationCoordinate2D toCoord); 
+        #endregion
     }
 
     [Native]
@@ -351,5 +359,5 @@ namespace MAMapKit
         Purple
     }
 
-   
+
 }

@@ -141,7 +141,7 @@ namespace MAMapKit
     {
         // @property (readonly, nonatomic) id<MAOverlay> overlay;
         [Export("overlay")]
-        AMap2DBinding.iOS.MAOverlay Overlay { get; }
+        MAMapKit.MAOverlay Overlay { get; }
 
         // @property CGFloat alpha;
         [Export("alpha")]
@@ -153,7 +153,7 @@ namespace MAMapKit
 
         // -(id)initWithOverlay:(id<MAOverlay>)overlay;
         [Export("initWithOverlay:")]
-        IntPtr Constructor(AMap2DBinding.iOS.MAOverlay overlay);
+        IntPtr Constructor(MAMapKit.MAOverlay overlay);
 
         // -(CGPoint)pointForMapPoint:(MAMapPoint)mapPoint;
         [Export("pointForMapPoint:")]
@@ -275,7 +275,7 @@ namespace MAMapKit
     {
         // -(id)initWithOverlay:(id<MAOverlay>)overlay;
         [Export("initWithOverlay:")]
-        IntPtr Constructor(AMap2DBinding.iOS.MAOverlay overlay);
+        IntPtr Constructor(MAMapKit.MAOverlay overlay);
 
         // @property (readonly, nonatomic) id<MAOverlay> overlay;
         [Export("overlay")]
@@ -586,15 +586,15 @@ namespace MAMapKit
 
         // -(MAOverlayRenderer *)rendererForOverlay:(id<MAOverlay>)overlay;
         [Export("rendererForOverlay:")]
-        MAOverlayRenderer RendererForOverlay(AMap2DBinding.iOS.MAOverlay overlay);
+        MAOverlayRenderer RendererForOverlay(MAMapKit.MAOverlay overlay);
 
         // -(MAOverlayView *)viewForOverlay:(id<MAOverlay>)overlay __attribute__((deprecated("use - (MAOverlayRenderer *)rendererForOverlay:(id <MAOverlay>)overlay instead")));
         [Export("viewForOverlay:")]
-        MAOverlayView ViewForOverlay(AMap2DBinding.iOS.MAOverlay overlay);
+        MAOverlayView ViewForOverlay(MAMapKit.MAOverlay overlay);
 
         // -(void)addOverlay:(id<MAOverlay>)overlay;
         [Export("addOverlay:")]
-        void AddOverlay(AMap2DBinding.iOS.MAOverlay overlay);
+        void AddOverlay(MAMapKit.MAOverlay overlay);
 
         // -(void)addOverlays:(NSArray *)overlays;
         [Export("addOverlays:")]
@@ -603,7 +603,7 @@ namespace MAMapKit
 
         // -(void)removeOverlay:(id<MAOverlay>)overlay;
         [Export("removeOverlay:")]
-        void RemoveOverlay(AMap2DBinding.iOS.MAOverlay overlay);
+        void RemoveOverlay(MAMapKit.MAOverlay overlay);
 
         // -(void)removeOverlays:(NSArray *)overlays;
         [Export("removeOverlays:")]
@@ -612,7 +612,7 @@ namespace MAMapKit
 
         // -(void)insertOverlay:(id<MAOverlay>)overlay atIndex:(NSUInteger)index;
         [Export("insertOverlay:atIndex:")]
-        void InsertOverlayAtIndex(AMap2DBinding.iOS.MAOverlay overlay, nuint index);
+        void InsertOverlayAtIndex(MAMapKit.MAOverlay overlay, nuint index);
 
         // -(void)exchangeOverlayAtIndex:(NSUInteger)index1 withOverlayAtIndex:(NSUInteger)index2;
         [Export("exchangeOverlayAtIndex:withOverlayAtIndex:")]
@@ -620,11 +620,11 @@ namespace MAMapKit
 
         // -(void)insertOverlay:(id<MAOverlay>)overlay aboveOverlay:(id<MAOverlay>)sibling;
         [Export("insertOverlay:aboveOverlay:")]
-        void InsertOverlayAboveOverlay(AMap2DBinding.iOS.MAOverlay overlay, MAOverlay sibling);
+        void InsertOverlayAboveOverlay(MAMapKit.MAOverlay overlay, MAOverlay sibling);
 
         // -(void)insertOverlay:(id<MAOverlay>)overlay belowOverlay:(id<MAOverlay>)sibling;
         [Export("insertOverlay:belowOverlay:")]
-        void InsertOverlayBelowOverlay(AMap2DBinding.iOS.MAOverlay overlay, MAOverlay sibling);
+        void InsertOverlayBelowOverlay(MAMapKit.MAOverlay overlay, MAOverlay sibling);
 
         // -(void)showOverlays:(NSArray *)overlays animated:(BOOL)animated;
         [Export("showOverlays:animated:")]
