@@ -262,3 +262,4 @@ __pycache__/
 /AMap3DBinding.iOS/Native References/MAMapKit.framework
 /AMap3DBinding.iOS/MAMapKit.a
 /AMapFoundationBinding.iOS/AMapFoundationKit.a
+/AMap2DBinding.Droid/Jars/Amap_2DMap_V5.2.0_20170627.jar
