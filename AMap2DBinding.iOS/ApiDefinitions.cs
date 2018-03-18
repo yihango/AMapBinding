@@ -5,10 +5,10 @@ using Foundation;
 using ObjCRuntime;
 using UIKit;
 
-using AMap2DBinding.iOS;
+using MAMapKit;
 
 
-namespace AMap2DBinding.iOS
+namespace MAMapKit
 {
     // typedef void (^AMapTileProjectionBlock)(int, int, int, int, int, int);
     delegate void AMapTileProjectionBlock(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
